@@ -1,0 +1,40 @@
+/** Homepage */
+
+.jumbotron, .preheader, .bg-dark {
+    background-color: #373F52 !important;
+}
+
+.jumbotron {
+    padding-bottom: 100px !important;
+    border-radius: 0px;
+    margin-bottom: 0px;
+}
+
+.jumbotron .h1 {
+    font-size: 5.9rem !important;
+    margin-bottom: 0px !important;
+}
+
+.jumbotron .h2 {
+    margin-bottom: 0px !important;
+    padding-top: 0px;
+    color: #fff;
+    font-size: 3.4rem;
+}
+
+/** Projets */
+.overlay {
+    color: #fff;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.overlay:hover {
+    opacity: 1;
+}

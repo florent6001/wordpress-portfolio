@@ -1,0 +1,46 @@
+.pre-header {
+  font-size: 14px;
+}
+
+.pre-header a{
+  text-decoration: none !important;
+}
+
+.social-icons a{
+  @extend .pl-3;
+}
+
+@media (max-width: 991px) {
+
+  .navbar-nav {
+    padding-top: 20px;
+  }
+
+  .nav-item {
+    padding-left: 0px !important;
+  }
+
+}
+
+.navbar {
+  min-height: 110px;
+  @extend .px-0;
+}
+
+.navbar .nav-link {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.nav-item {
+  padding-left: 20px;
+  padding-right: 0px;
+}
+
+.nav-link {
+  border-bottom: 1px solid transparent;
+}
+
+.nav-link:hover {
+  border-bottom: 1px solid;
+}

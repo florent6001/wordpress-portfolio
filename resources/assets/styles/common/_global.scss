@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    background-color: #2C3242;
+    color: #fff;
+}
+
+.navbar-dark .navbar-nav .nav-link{
+    color: #fff !important;
+}
+
+
+p {
+    margin-bottom: 0px !important;
+}
+
+a {
+    color: $primary;
+}
+
+.card-header {
+    background-color: $primary;
+}
+
+.card-body {
+    background-color: #2C3242 !important;
+}
+
+.btn {
+    text-transform: uppercase;
+}
+
+.border-dark {
+    border-color: #343a4038 !important;
+}
+
+h2 {
+    @extend .mb-2;
+}
+
+ul.no-list-style {
+    list-style-type: none;
+}
+
+.widget {
+    @extend .mb-5;
+}
+
+.comment-form-comment, .comment-form-author, .comment-form-email, .comment-form-cookies-consent, .form-submit {
+    @extend .mt-3;
+}

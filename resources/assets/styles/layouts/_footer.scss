@@ -1,0 +1,28 @@
+footer ul, footer .nav-item {
+    list-style-type: none;
+    padding-left: 0px !important;
+}
+
+footer .nav-link {
+    border: none !important;
+    padding-left: 0px !important;
+    color: #fff;
+}
+
+footer .nav-link:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+footer .nav-link {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+footer h3 {
+    @extend .mb-4;
+}
+
+footer .col-md-4 {
+    @extend .pr-5;
+}
