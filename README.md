@@ -1,25 +1,24 @@
-# [Sage](https://roots.io/sage/)
+# [Theme Wordpress avec sage 9](https://roots.io/sage/)
 [![Packagist](https://img.shields.io/packagist/vpre/roots/sage.svg?style=flat-square)](https://packagist.org/packages/roots/sage)
 [![devDependency Status](https://img.shields.io/david/dev/roots/sage.svg?style=flat-square)](https://david-dm.org/roots/sage#info=devDependencies)
 [![Build Status](https://img.shields.io/travis/roots/sage.svg?style=flat-square)](https://travis-ci.org/roots/sage)
 
-Sage is a WordPress starter theme with a modern development workflow.
+Ceci est thème WordPress créé pour mon portfolio personnel. J'ai utilisé Sage & Bedrock afin de développer celui-ci.
+Si vous souhaitez utiliser cette base pour votre site personnel, merci de modifier l'apparence des vues afin de ne pas avoir le même design que mon site. 
 
-## Features
+## Fonctionnalités
 
-* Sass for stylesheets
-* Modern JavaScript
-* [Webpack](https://webpack.github.io/) for compiling assets, optimizing images, and concatenating and minifying files
-* [Browsersync](http://www.browsersync.io/) for synchronized browser testing
-* [Blade](https://laravel.com/docs/5.6/blade) as a templating engine
-* [Controller](https://github.com/soberwp/controller) for passing data to Blade templates
-* CSS framework (optional): [Bootstrap 4](https://getbootstrap.com/), [Bulma](https://bulma.io/), [Foundation](https://foundation.zurb.com/), [Tachyons](http://tachyons.io/), [Tailwind](https://tailwindcss.com/)
+* Compilation des fichiers SASS
+* Fichiers Javascript Modernes
+* [Webpack](https://webpack.github.io/) pour compiler, optimier les images et minifier les fichiers.
+* [Browsersync](http://www.browsersync.io/) pour avoir une live-preview en codant
+* [Blade](https://laravel.com/docs/5.6/blade) comme moteur de templates
+* [Controller](https://github.com/soberwp/controller) pour passer des données à la vue.
+* Framework CSS : [Bootstrap 4](https://getbootstrap.com/)
 
-See a working example at [roots-example-project.com](https://roots-example-project.com/).
+## Requis
 
-## Requirements
-
-Make sure all dependencies have been installed before moving on:
+Si vous souhaitez utiliser ce dépot git, voici la liste des pré-requis.
 
 * [WordPress](https://wordpress.org/) >= 4.7
 * [PHP](https://secure.php.net/manual/en/install.php) >= 7.1.3 (with [`php-mbstring`](https://secure.php.net/manual/en/book.mbstring.php) enabled)
@@ -27,24 +26,13 @@ Make sure all dependencies have been installed before moving on:
 * [Node.js](http://nodejs.org/) >= 8.0.0
 * [Yarn](https://yarnpkg.com/en/docs/install)
 
-## Theme installation
+## Installation du thème
 
-Install Sage using Composer from your WordPress themes directory (replace `your-theme-name` below with the name of your theme):
+1. Faite un "git clone" afin de télécharger le dépôt git sur votre pc.
+2. Faite un "composer install" afin de télécharger toutes les dépendances php nécessaire.
+3. Tapez "yarn" afin d'installer les dépendances Javascript.
 
-```shell
-# @ app/themes/ or wp-content/themes/
-$ composer create-project roots/sage your-theme-name
-```
-
-To install the latest development version of Sage, add `dev-master` to the end of the command:
-
-```shell
-$ composer create-project roots/sage your-theme-name dev-master
-```
-
-During theme installation you will have options to update `style.css` theme headers, select a CSS framework, and configure Browsersync.
-
-## Theme structure
+## Structure du thème
 
 ```shell
 themes/your-theme-name/   # → Root of your Sage based theme
@@ -54,6 +42,7 @@ themes/your-theme-name/   # → Root of your Sage based theme
 │   ├── filters.php       # → Theme filters
 │   ├── helpers.php       # → Helper functions
 │   └── setup.php         # → Theme setup
+│   └── customize.php     # → Fichier gérant le customizer API de wordPress.
 ├── composer.json         # → Autoloading for `app/` files
 ├── composer.lock         # → Composer lock file (never edit)
 ├── dist/                 # → Built theme assets (never edit)
@@ -77,44 +66,25 @@ themes/your-theme-name/   # → Root of your Sage based theme
 └── vendor/               # → Composer packages (never edit)
 ```
 
-## Theme setup
+## Développement
 
-Edit `app/setup.php` to enable or disable theme features, setup navigation menus, post thumbnail sizes, and sidebars.
-
-## Theme development
-
-* Run `yarn` from the theme directory to install dependencies
-* Update `resources/assets/config.json` settings:
-  * `devUrl` should reflect your local development hostname
-  * `publicPath` should reflect your WordPress folder structure (`/wp-content/themes/sage` for non-[Bedrock](https://roots.io/bedrock/) installs)
+* Lancer `yarn` afin d'installer toutes les dépendances du thème lié au développement.
+* Mettre à jours le fichier `resources/assets/config.json` :
+  * `devUrl` doit représenter le chemin d'accès à votre thème local.
+  * `publicPath` doit représenter la structure de votre thème WordPress (`/wp-content/themes/wordpress-portfolio` pour une installation n'utilisant pas [Bedrock](https://roots.io/bedrock/))
 
 ### Build commands
 
-* `yarn start` — Compile assets when file changes are made, start Browsersync session
-* `yarn build` — Compile and optimize the files in your assets directory
-* `yarn build:production` — Compile assets for production
+* `yarn start` — Compile les assets automatiquement à chaque changement, démarre Browsersync
+* `yarn build` — Compile et optimize les fichiers dans votre dossier assets.
+* `yarn build:production` — Compile les fichiers pour la production (retire les CSS non utilisé)
 
 ## Documentation
 
 * [Sage documentation](https://roots.io/sage/docs/)
 * [Controller documentation](https://github.com/soberwp/controller#usage)
 
-## Contributing
+## Contribution
 
-Contributions are welcome from everyone. We have [contributing guidelines](https://github.com/roots/guidelines/blob/master/CONTRIBUTING.md) to help you get started.
-
-## Sage sponsors
-
-Help support our open-source development efforts by [becoming a patron](https://www.patreon.com/rootsdev).
-
-<a href="https://kinsta.com/?kaid=OFDHAJIXUDIV"><img src="https://cdn.roots.io/app/uploads/kinsta.svg" alt="Kinsta" width="200" height="150"></a> <a href="https://k-m.com/"><img src="https://cdn.roots.io/app/uploads/km-digital.svg" alt="KM Digital" width="200" height="150"></a> <a href="https://www.itineris.co.uk/"><img src="https://cdn.roots.io/app/uploads/itineris.svg" alt="itineris" width="200" height="150"></a> <a href="http://www.hbgdesignlab.se/"><img src="https://cdn.roots.io/app/uploads/helsingborgdesignlab.png" alt="Helsingborg Design LAB" with="200" height="150">
-
-## Community
-
-Keep track of development and community news.
-
-* Participate on the [Roots Discourse](https://discourse.roots.io/)
-* Follow [@rootswp on Twitter](https://twitter.com/rootswp)
-* Read and subscribe to the [Roots Blog](https://roots.io/blog/)
-* Subscribe to the [Roots Newsletter](https://roots.io/subscribe/)
-* Listen to the [Roots Radio podcast](https://roots.io/podcast/)
+Vous pouvez [contribuer à sage](https://github.com/roots/guidelines/blob/master/CONTRIBUTING.md) en lisant ceci.
+Pour ce qui est de ce thème, vous êtes également libre de faire des pull request pour régler des problèmes, optimiser une partie de code ou corriger fautes d'orthographes.
