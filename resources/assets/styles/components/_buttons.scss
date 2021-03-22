@@ -31,6 +31,6 @@ a.btn:hover{
 
 a#btn-top:hover {
     background-color: #3ccf91 !important;
-    @extend .transition;
+    @extend .transition, .text-white;
     text-decoration: none !important;
 }
