@@ -37,10 +37,15 @@
   padding-right: 0px;
 }
 
+.navbar-dark .navbar-nav .nav-link{
+    color: #fff !important;
+}
+
 .nav-link {
   border-bottom: 1px solid transparent;
 }
 
 .nav-link:hover {
   border-bottom: 1px solid;
+  @extend .border-primary;
 }

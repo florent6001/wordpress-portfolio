@@ -1,0 +1,32 @@
+.btn {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 13px;
+    @extend .transition;
+}
+
+.btn-secondary:hover {
+    background-color: #454753;
+    @extend .transition;
+}
+
+.btn-lg {
+    @extend .px-4, .py-3;
+}
+
+#btn-top {
+    @extend .bg-secondary, .p-3, .rounded-circle, .text-white;
+    position: fixed;
+    display: none;
+    left: auto;
+    top: auto;
+    right: 50px;
+    bottom: 50px;
+    z-index: 10;
+}
+
+a#btn-top:hover {
+    background-color: #3ccf91 !important;
+    @extend .transition;
+    text-decoration: none !important;
+}

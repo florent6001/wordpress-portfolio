@@ -8,9 +8,11 @@
   </head>
   <body @php body_class() @endphp>
     @php do_action('get_header') @endphp
-
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-primary">
+    <a href="#top" id="btn-top" title="Retourner en haut">
+      <i class="fas fa-arrow-up"></i>
+    </a> 
+    <header id="top">
+      <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
           <a href="{{ home_url('/') }}" class="navbar-brand">
             <?php 
@@ -43,7 +45,7 @@
     </main>
 
     @php do_action('get_footer') @endphp
-    <footer class="mt-5 bg-dark py-5 text-white border-top border-secondary">
+    <footer class="bg-dark py-5 text-white border-top border-primary">
       <div class="container">
         <div class="row">
           <div class="col-md-4 mt-4">
@@ -61,13 +63,25 @@
             {!! get_search_form(false) !!}
           </div>
           <div class="col-md-12 text-center mt-5">
-            <a href="https://www.facebook.com/FlorentVandroy/" target="_blank" class="text-white px-2"><i class="fab fa-2x fa-facebook"></i></a>
-            <a href="https://twitter.com/Florent_Vandroy" target="_blank" class="text-white px-2"><i class="fab fa-2x fa-twitter"></i></a>
-            <a href="https://fr.linkedin.com/in/florent-vandroy" target="_blank" class="text-white px-2"><i class="fab fa-2x fa-linkedin"></i></a>
+            <a href="https://www.facebook.com/FlorentVandroy/" target="_blank" class="text-white px-5"><i class="fab fa-2x fa-facebook"></i></a>
+            <a href="https://twitter.com/Florent_Vandroy" target="_blank" class="text-white px-5"><i class="fab fa-2x fa-twitter"></i></a>
+            <a href="https://fr.linkedin.com/in/florent-vandroy" target="_blank" class="text-white px-5"><i class="fab fa-2x fa-linkedin"></i></a>
           </div>
         </div>
       </div>
     </footer>
     @php wp_footer() @endphp
+    <script>
+      mybutton = document.getElementById("btn-top");
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+    </script>
   </body>
 </html>

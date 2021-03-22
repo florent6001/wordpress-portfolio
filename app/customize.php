@@ -21,51 +21,6 @@ function add_custom_theme_customization($wp_customize) {
         'panel' => 'theme-customization'
     ));
 
-    $wp_customize->add_setting('jumbotron-title' , array(
-        'default'   => 'Florent Vandroy',
-        'transport' => 'refresh'
-    ));
-
-    $wp_customize->add_control(new \WP_Customize_Control($wp_customize, 'jumbotron-title',
-            array(
-                'label'    => 'Modification du titre',
-                'section'  => 'jumbotron-section',
-                'settings' => 'jumbotron-title',
-                'type'     => 'text'
-            )
-        )
-    );
-
-    $wp_customize->add_setting('jumbotron-headline' , array(
-        'default'   => 'Développeur Web Freelance',
-        'transport' => 'refresh'
-    ));
-
-    $wp_customize->add_control(new \WP_Customize_Control($wp_customize, 'jumbotron-headline',
-            array(
-                'label'    => 'Phrase d\'accroche',
-                'section'  => 'jumbotron-section',
-                'settings' => 'jumbotron-headline',
-                'type'     => 'textarea'
-            )
-        )
-    );
-    
-    $wp_customize->add_setting('jumbotron-description' , array(
-        'default'   => 'Vous dirigez une TPE / PME et souhaitez promouvoir votre activité en ligne&nbsp;? Je développe des sites clés en main afin de vous faire briller.',
-        'transport' => 'refresh'
-    ));
-
-    $wp_customize->add_control(new \WP_Customize_Control($wp_customize, 'jumbotron-description',
-            array(
-                'label'    => 'Texte de description',
-                'section'  => 'jumbotron-section',
-                'settings' => 'jumbotron-description',
-                'type'     => 'textarea'
-            )
-        )
-    );
-
     $wp_customize->add_setting('jumbotron-btn1-text' , array(
         'default'   => 'Me contacter.',
         'transport' => 'refresh'
@@ -251,6 +206,30 @@ function add_custom_theme_customization($wp_customize) {
                 'section'  => 'services-section',
                 'settings' => 'services4-description',
                 'type'     => 'textarea'
+            )
+        )
+    );
+
+    // Contact section
+
+    $wp_customize->add_section('contact-section' , array(
+        'title'      => 'Personnalisation de la section contact',
+        'priority'   => 3,
+        'description' => 'Vous permet de modifier le texte ainsi que les boutons du contact',
+        'panel' => 'theme-customization'
+    ));
+
+    $wp_customize->add_setting('contact-btn-link' , array(
+        'default'   => '#',
+        'transport' => 'refresh'
+    ));
+
+    $wp_customize->add_control(new \WP_Customize_Control($wp_customize, 'contact-btn-link',
+            array(
+                'label'    => 'Lien du bouton',
+                'section'  => 'contact-section',
+                'settings' => 'contact-btn-link',
+                'type'     => 'text'
             )
         )
     );

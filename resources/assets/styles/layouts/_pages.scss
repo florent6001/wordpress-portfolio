@@ -1,11 +1,22 @@
 /** Homepage */
 
 .jumbotron, .preheader, .bg-dark {
-    background-color: #373F52 !important;
+    background-size: 100%;
+    background-color: #12141D;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@media (max-width: 991px) {
+
+    .jumbotron {
+        background-image: none !important;
+    }
 }
 
 .jumbotron {
     padding-bottom: 100px !important;
+    padding-top: 25px !important;
     border-radius: 0px;
     margin-bottom: 0px;
 }
@@ -22,19 +33,22 @@
     font-size: 3.4rem;
 }
 
-/** Projets */
-.overlay {
-    color: #fff;
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
+.service {
+    @extend .bg-secondary, .rounded, .p-5, .transition;
 }
 
-.overlay:hover {
-    opacity: 1;
+.service:hover {
+    @extend .bg-primary, .transition;
+}
+
+.project {
+    @extend .bg-secondary, .p-5, .transition;
+}
+
+.post {
+    @extend .bg-secondary, .p-5, .transition;
+}
+
+.project:hover {
+    @extend .bg-dark, .transition;
 }

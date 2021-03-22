@@ -1,14 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
 
-body {
-    background-color: #2C3242;
+body, .bg-dark {
+    background-color: #12141d !important;
     color: #fff;
+    font-family: 'Roboto', sans-serif;
 }
 
-.navbar-dark .navbar-nav .nav-link{
-    color: #fff !important;
+.title, .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 
+{
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
 }
-
 
 p {
     margin-bottom: 0px !important;
@@ -16,18 +19,29 @@ p {
 
 a {
     color: $primary;
+    text-decoration: none !important;
+    @extend .text-transition, .text-white;
 }
 
-.card-header {
-    background-color: $primary;
+footer a:hover {
+    text-decoration: underline !important;
+}
+
+a.text-white:hover {
+    color:hsla(0, 0%, 100%, 0.5) !important;
+    @extend .text-transition;
+}
+
+.card {
+    border: none !important;
 }
 
 .card-body {
-    background-color: #2C3242 !important;
+    @extend .bg-secondary, .p-5, .rounded, .transition;
 }
 
-.btn {
-    text-transform: uppercase;
+.card-body:hover {
+    @extend .bg-primary, .transition;
 }
 
 .border-dark {
@@ -42,10 +56,31 @@ ul.no-list-style {
     list-style-type: none;
 }
 
-.widget {
-    @extend .mb-5;
-}
-
 .comment-form-comment, .comment-form-author, .comment-form-email, .comment-form-cookies-consent, .form-submit {
     @extend .mt-3;
+}
+
+.text-muted {
+    color: hsla(0, 0%, 100%, 0.8);
+    font-weight: bold;
+}
+
+.text-lg {
+    font-size: 18px;
+}
+
+.title {
+    @extend .text-primary, .mb-5, .h1;
+}
+
+.transition {
+    transition: background-color 1s;
+}
+
+.text-transition {
+    transition: color 1s;
+}
+
+section {
+    @extend .pt-5, .pb-5;
 }
