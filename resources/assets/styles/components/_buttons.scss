@@ -25,6 +25,10 @@
     z-index: 10;
 }
 
+a.btn:hover{
+    @extend .text-transition, .text-white;
+}
+
 a#btn-top:hover {
     background-color: #3ccf91 !important;
     @extend .transition;
