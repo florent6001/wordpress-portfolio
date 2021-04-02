@@ -6,16 +6,16 @@
     <div class="row">
       <div class="col-md-8">
 
-        @if (!have_posts())
-          <div class="mt-5">
-            <h1>Désolé, aucun article n'a été trouvé.</h1>
-          </div>
-        @endif
-
         <div class="mt-5">
           <h1 class="h2">Recherche.</h2>
           <p class="mb-1">Les résultats de votre recherche sont ci-dessous.</p>
         </div>
+
+        @if (!have_posts())
+          <div class="mt-5">
+            <p>Désolé, aucun article n'a été trouvé.</p>
+          </div>
+        @endif
 
         @while (have_posts()) @php the_post() @endphp
           <div class="mt-5">

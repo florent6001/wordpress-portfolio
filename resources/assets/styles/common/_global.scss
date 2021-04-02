@@ -18,7 +18,7 @@ p {
 }
 
 a {
-    color: $primary;
+    color: $primary !important;
     text-decoration: none !important;
     @extend .text-transition, .text-white;
 }

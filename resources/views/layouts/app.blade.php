@@ -4,6 +4,21 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Développeur web Freelance à Bergerac. Création de site vitrine, création de site sur mesure et gestion de réseaux sociaux.">
+    <meta name="keywords" content="site internet création développement web freelance bergerac dordogne 24 réseaux sociaux seo référencement">
+    {{-- Twitter card --}}
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:description" content="Développeur web Freelance à Bergerac. Création de site vitrine, création de site sur mesure et gestion de réseaux sociaux.">
+    <meta name="twitter:image" content="<?= get_template_directory_uri(); ?>/assets/images/logo_black.png">
+    <meta name="twitter:site" content="@Florent_Vandroy">
+    {{-- Opengraph --}}
+    <meta property="og:title" content="Florent Vandroy - Développeur web freelance à Bergerac">
+    <meta property="og:site_name" content="Florent Vandroy">
+    <meta property="og:url" content="https://florent-vandroy.fr/">
+    <meta property="og:description" content="Développeur web Freelance à Bergerac. Création de site vitrine, création de site sur mesure et gestion de réseaux sociaux.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="<?= get_template_directory_uri(); ?>/assets/images/logo_black.png"">
+    
     @php wp_head() @endphp
   </head>
   <body @php body_class() @endphp>
@@ -82,6 +97,15 @@
           mybutton.style.display = "none";
         }
       }
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123751778-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-123751778-1');
     </script>
   </body>
 </html>
