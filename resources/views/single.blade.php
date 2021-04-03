@@ -15,7 +15,7 @@
         <div class="mt-5">
             <article class="post-list-item">
                 {!! the_post_thumbnail('large', array('class' => 'w-100 h-100')) !!}
-                <h1 class="h4 mt-3 mb-1"><a href="{!! the_permalink() !!}" class="text-secondary">{!! get_the_title() !!}</a></h1>
+                <h1 class="h4 mt-3 mb-1"><a href="{!! the_permalink() !!}">{!! get_the_title() !!}</a></h1>
                 <small class="blog-post-meta">Publié le {!! get_the_date() !!}</a></small>
                 <p class="mt-2">{!! get_the_content() !!}<p>
             </article>
