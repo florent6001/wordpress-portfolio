@@ -77,10 +77,12 @@
             <h3>Recherche rapide</h3>
             {!! get_search_form(false) !!}
           </div>
-          <div class="col-md-12 text-center mt-5">
-            <a href="https://www.facebook.com/FlorentVandroy/" target="_blank" class="text-white px-5"><i class="fab fa-2x fa-facebook"></i></a>
-            <a href="https://twitter.com/Florent_Vandroy" target="_blank" class="text-white px-5"><i class="fab fa-2x fa-twitter"></i></a>
-            <a href="https://fr.linkedin.com/in/florent-vandroy" target="_blank" class="text-white px-5"><i class="fab fa-2x fa-linkedin"></i></a>
+        </div>
+        <div class="row">
+          <div class="col-4 offset-4 d-flex justify-content-between mt-5">
+            <a href="https://www.facebook.com/FlorentVandroy/" target="_blank" class="text-white"><i class="fab fa-2x fa-facebook"></i></a>
+            <a href="https://twitter.com/Florent_Vandroy" target="_blank" class="text-white"><i class="fab fa-2x fa-twitter"></i></a>
+            <a href="https://fr.linkedin.com/in/florent-vandroy" target="_blank" class="text-white"><i class="fab fa-2x fa-linkedin"></i></a>
           </div>
         </div>
       </div>
@@ -97,15 +99,6 @@
           mybutton.style.display = "none";
         }
       }
-    </script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123751778-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-123751778-1');
     </script>
   </body>
 </html>

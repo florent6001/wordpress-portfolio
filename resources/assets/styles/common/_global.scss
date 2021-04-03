@@ -20,7 +20,17 @@ p {
 a {
     color: $primary !important;
     text-decoration: none !important;
-    @extend .text-transition, .text-white;
+    @extend .text-transition;
+}
+
+a.btn {
+    color: #fff !important;
+    text-decoration: none !important;
+    @extend .text-transition;
+}
+
+footer a {
+    color: #fff !important;
 }
 
 footer a:hover {

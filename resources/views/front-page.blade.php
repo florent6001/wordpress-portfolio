@@ -2,12 +2,12 @@
 
 @section('content')
   {{-- Jumbotron --}}
-  <section class="jumbotron" style="background-image: url('<?= get_template_directory_uri(); ?>/assets/images/background-shapes.jpg ?>')" itemscope itemtype="https://schema.org/Organisation">
+  <section class="jumbotron mt-3" style="background-image: url('<?= get_template_directory_uri(); ?>/assets/images/background-shapes.jpg ?>')" itemscope itemtype="https://schema.org/Organisation">
     <div class="container">
       <div class="row flex-column-reverse flex-md-row mb-5">
         <div class="col-md-12 text-center cd-intro">
           <p class="text-primary font-weight-bold text-lg" itemprop="slogan">Plus qu'un site, une image de marque.</p>
-          <h2 class="font-weight-bold h1 text-white mt-0" itemprop="name">Florent Vandroy</h2>
+          <h2 class="font-weight-bold h1 text-white mt-0 my-5" itemprop="name">Florent Vandroy</h2>
           <h1 class="h2 cd-headline slide">
             Création de site web 
             <span class="cd-words-wrapper text-primary">
@@ -103,7 +103,7 @@
         <h2 class="title">Tarif.</h2>
       </div>
       <div class="row mt-5 mb-3">
-        <div class="col-md-4" itemscope itemtype="https://schema.org/Offer">
+        <div class="col-md-6" itemscope itemtype="https://schema.org/Offer">
           <div class="card mb-4 box-shadow">
             <div class="card-body">
               <h2 class="h3 my-0 font-weight-normal" itemprop="name">Modification de site existant</h2>
@@ -117,7 +117,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4" itemscope itemtype="https://schema.org/Offer">
+        <div class="col-md-6" itemscope itemtype="https://schema.org/Offer">
           <div class="card mb-4 box-shadow">
             <div class="card-body">
               <h2 class="h3 my-0 font-weight-normal" itemprop="name">Création d'un site vitrine</h2>
@@ -125,26 +125,8 @@
               <ul class="list-unstyled mt-3 mb-4" itemprop="description">
                 <li>- Développement de site WordPress</li>
                 <li>- Modification de thème existant</li>
-                <li>- Création de pages <br />
-                  <small>(accueil, services, blog et contact)</small>
-                </li>
+                <li>- Création de pages <small>(accueil, services, blog et contact)</small><br /></li>
                 <li>- Mise en ligne</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4" itemscope itemtype="https://schema.org/Offer">
-          <div class="card mb-4 box-shadow">
-            <div class="card-body">
-              <h2 class="h3 my-0 font-weight-normal" itemprop="name">Création de site sur-mesure</h2>
-              <h3 class="card-title pricing-card-title mt-4 h1" itemprop="price">Sur devis</h3>
-              <ul class="list-unstyled mt-3 mb-4" itemprop="description">
-                <li>- Créations de page</li>
-                <li>- Créations de fonctionnalitées</li>
-                <li>- Création d'un thème sur mesure</li>
-                <li>- Développement sur WordPress ou framework PHP <br />
-                </li>
-                <li>Mise en ligne</li>
               </ul>
             </div>
           </div>

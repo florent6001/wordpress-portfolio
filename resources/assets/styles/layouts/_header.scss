@@ -49,3 +49,10 @@
   border-bottom: 1px solid;
   @extend .border-primary;
 }
+
+@media (max-width: 991.98px) {
+  .navbar-expand-lg>.container {
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+  }
+}
